@@ -4,7 +4,7 @@ import { LocationT } from "../types.ts";
 const Episode = {
     characters : async (parent:any):Promise<CharacterT[]> => {
         console.log(parent)
-        const episodes = parent.characters.map(async (elem:any)=> {
+        const episodes = parent.characters.map(async (elem:string)=> {
             const data = await fetch(elem);
             const ch = await data.json();
             const data2 = {

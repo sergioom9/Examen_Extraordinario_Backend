@@ -29,3 +29,4 @@ export type LocationT = {
     residents:CharacterT[],
     created:string
 }
+

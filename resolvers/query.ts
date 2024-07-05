@@ -27,8 +27,8 @@ export const Query = {
     charactersByIds: async (
         _: unknown,
         args: { ids: string[] },
-    ): Promise<any> => {
-        const data = args.ids.map(async (elem: any) => {
+    ): Promise<CharacterT[]> => {
+        const data = args.ids.map(async (elem: string) => {
             const url = `https://rickandmortyapi.com/api/character/${elem}`;
             const character = await fetch(url);
             const ch = await character.json();

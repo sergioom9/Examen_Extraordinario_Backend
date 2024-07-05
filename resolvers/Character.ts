@@ -30,7 +30,7 @@
         return finalOrigin;
     },
     episode : (parent:any):Promise<EpisodeT[]> => {
-        const episodes = parent.episode.map(async (ch:any)=> {
+        const episodes = parent.episode.map(async (ch:string)=> {
             const data = await fetch(ch);
             const jsondata = await data.json();
             return {
